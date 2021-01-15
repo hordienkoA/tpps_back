@@ -1,0 +1,861 @@
+{
+	"variables": [],
+	"info": {
+		"name": "BuyFly",
+		"_postman_id": "e1d72a55-8f26-86b6-ecb6-1f976a59b4ab",
+		"description": "API call to backend part of BuyFly app.\nPerforms getAll, getByID, save/update/delete operations on all entities.\nCall for getting authorisation token.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Aircraft: /api/aircraft/",
+			"description": "API calls for Aircraft entity (/api/aircraft/)",
+			"item": [
+				{
+					"name": "Get all aircrafts",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/aircraft/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":407,\r\n    \"name\":\"Boeingy\",\r\n    \"model\":\"737\",\r\n    \"airlineId\":201\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get aircraft by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/aircraft/401",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":407,\r\n    \"name\":\"Boeingy\",\r\n    \"model\":\"737\",\r\n    \"airlineId\":201\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add aircraft",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/aircraft/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Boeing\",\r\n    \"model\":\"737\",\r\n    \"airlineId\":201\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update aircraft",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/aircraft/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":407,\r\n    \"name\":\"Boeingy\",\r\n    \"model\":\"737\",\r\n    \"airlineId\":201\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete aircraft by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/aircraft/427",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Airline: /api/airlines/",
+			"description": "API calls for Airline entity (/api/airlines/)",
+			"item": [
+				{
+					"name": "Get all airlines",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airlines/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get airline by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airlines/201",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add airline",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airlines/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"AirlineU\",\r\n    \"icao\":\"AIU\",\r\n    \"iata\":\"AU\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update airline",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airlines/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":219,\r\n    \"name\":\"AirlineT\",\r\n    \"icao\":\"AIT\",\r\n    \"iata\":\"AT\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete airline by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airlines/219",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Airport: /api/airports/",
+			"description": "API calls for Airport entity (/api/airports/)",
+			"item": [
+				{
+					"name": "Get all airports",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airports/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get airport by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airports/301",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add airport",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airports/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Airport\",\r\n    \"icao\":\"AIK4\",\r\n    \"iata\":\"AK3\",\r\n    \"taxPrice\":1.5,\r\n    \"cityId\":101\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update airport",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airports/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":1314,\r\n    \"name\":\"AirportCHANGED\",\r\n    \"icao\":\"AIK4\",\r\n    \"iata\":\"AK3\",\r\n    \"taxPrice\":1.5,\r\n    \"cityId\":101\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete airport by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/airports/1314",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Boarding Pass: /api/boardingPasses/",
+			"description": "API calls for BoardingPass entity (/api/boardingPasses/)",
+			"item": [
+				{
+					"name": "Get all boarding passes",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/boardingPasses/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get boarding pass by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/boardingPasses/801",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Save boarding pass",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/boardingPasses/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"bookingDate\":\"2017-09-26T15:00:00\",\r\n    \"status\":\"BOOKED\",\r\n    \"checkedLuggagePrice\":1.2,\r\n    \"additionalWeightPrice\":1.5,\r\n    \"userId\":14,\r\n    \"flightId\":701,\r\n    \"seatId\":502\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update boarding pass",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/boardingPasses/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":804,\r\n    \"bookingDate\":\"2017-09-26T15:15:00\",\r\n    \"status\":\"BOOKED\",\r\n    \"checkedLuggagePrice\":0,\r\n    \"additionalWeightPrice\":1.5,\r\n    \"userId\":14,\r\n    \"flightId\":701,\r\n    \"seatId\":502\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete boarding pass by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/boardingPasses/804",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "City: /api/cities/",
+			"description": "API calls for City entity (/api/cities/)",
+			"item": [
+				{
+					"name": "Get all cities",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/cities/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get city by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/cities/101",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add city",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/cities/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Chernihiv\",\r\n    \"country\":\"Ukraine\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update city",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/cities/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": 133,\r\n    \"name\":\"Chernigov\",\r\n    \"country\":\"Ukraine\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete city by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/cities/133",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Flight: /api/flights/",
+			"description": "API calls for Flight entity (/api/flights/)",
+			"item": [
+				{
+					"name": "Get all flights",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/flights/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get flight by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/flights/701",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add flight",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/flights/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\":\"WE 799\",\r\n    \"boardingTime\":\"2017-09-26T15:00:00\",\r\n    \"departureTime\":\"2017-09-26T15:20:00\",\r\n    \"arrivalTime\":\"2017-09-26T23:00:00\",\r\n    \"gate\":\"G9\",\r\n    \"originAirportId\":301,\r\n    \"destinationAirportId\":328,\r\n    \"aircraftId\":401\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update flight",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/flights/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":716,\r\n    \"number\":\"WE 799\",\r\n    \"boardingTime\":\"2017-09-26T15:00:00\",\r\n    \"departureTime\":\"2017-09-26T15:20:00\",\r\n    \"arrivalTime\":\"2017-09-26T23:00:00\",\r\n    \"gate\":\"G10\",\r\n    \"originAirportId\":301,\r\n    \"destinationAirportId\":328,\r\n    \"aircraftId\":401\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete flight",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/flights/711",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Seat: /api/seats/",
+			"description": "API calls for Seat entity (/api/seats/)",
+			"item": [
+				{
+					"name": "Get all seats",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/seats/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get seat by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/seats/501",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add seat",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/seats/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\":1,\r\n    \"price\":12.1,\r\n    \"seatClass\":\"F\",\r\n    \"taken\":false,\r\n    \"aircraftId\":406\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update seat",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/seats/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":508,\r\n    \"number\":\"r5\",\r\n    \"price\":12.1,\r\n    \"seatClass\":\"J\",\r\n    \"taken\":false,\r\n    \"aircraftId\":406\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete seat by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/seats/508",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User: /api/users/",
+			"description": "API calls for User entity (/api/users/)",
+			"item": [
+				{
+					"name": "Get all users",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/users/",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Get user by ID",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/users/10",
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Add user",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/users/",
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\":\"qwe312\",\r\n    \"userRole\":\"ADMIN\",\r\n    \"registered\":true,\r\n    \"enabled\":true,\r\n    \"firstName\":\"test\",\r\n    \"lastName\":\"test\",\r\n    \"sex\":\"MALE\",\r\n    \"dateOfBirth\":\"1994-01-24\",\r\n    \"phoneNumber\":\"3333333333\",\r\n    \"email\":\"test1@mail.com\",\r\n    \"documentNumber\":\"NM231973\",\r\n    \"documentExpirationDate\":\"2020-08-23\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/users/",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\":14,\r\n    \"password\":\"qwe312\",\r\n    \"userRole\":\"ADMIN\",\r\n    \"registered\":true,\r\n    \"enabled\":true,\r\n    \"firstName\":\"test\",\r\n    \"lastName\":\"test\",\r\n    \"sex\":\"MALE\",\r\n    \"dateOfBirth\":\"1994-01-24\",\r\n    \"phoneNumber\":\"121212\",\r\n    \"email\":\"test@mail.com\",\r\n    \"documentNumber\":\"NM23197\",\r\n    \"documentExpirationDate\":\"2020-08-23\"\r\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"url": "http://localhost:8080/buyfly-0.0.1/api/users/19",
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json; charset=utf-8",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Get token",
+			"request": {
+				"url": "http://localhost:8080/buyfly-0.0.1/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YmlsbDphYmMxMjM=",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "username",
+							"value": "bill",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "password",
+							"value": "abc123",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

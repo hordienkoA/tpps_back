@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/buyfly</property>
+        <property name="hibernate.connection.username">admin</property>
+        <property name="hibernate.connection.password">buyfly</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="ua.cn.stu.tpps.buyfly.domain.DomainSuperClass" />
+        <mapping class="ua.cn.stu.tpps.buyfly.domain.Aircraft" />
+        <mapping class="ua.cn.stu.tpps.buyfly.domain.Airline" />
+        <mapping class="ua.cn.stu.tpps.buyfly.domain.Airport" />
+        <mapping class="ua.cn.stu.tpps.buyfly.domain.BoardingPass" />
+        <mapping class="ua.cn.stu.tpps.buyfly.domain.City" />
+        <mapping class="ua.cn.stu.tpps.buyfly.domain.Flight" />
+        <mapping class="ua.cn.stu.tpps.buyfly.domain.Seat" />
+        <mapping class="ua.cn.stu.tpps.buyfly.domain.User" />
+
+    </session-factory>
+</hibernate-configuration>

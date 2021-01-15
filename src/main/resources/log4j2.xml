@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info" strict="true" name="BuyFly">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%[%d] %p %C: %m%n" />
+        </Console>
+        <File name="MyFile" fileName="logs/buyfly.log">
+            <PatternLayout pattern="[%d] %p %C: %m%n" />
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+            <AppenderRef ref="Console" />
+            <AppenderRef ref="MyFile" />
+        </Root>
+    </Loggers>
+</Configuration>

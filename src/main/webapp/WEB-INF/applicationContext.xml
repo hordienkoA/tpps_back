@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <context:component-scan base-package="ua.cn.stu.tpps.buyfly" />
+    <context:annotation-config />
+
+    <!-- Dao beans -->
+    <bean id="aircraftDao" class="ua.cn.stu.tpps.buyfly.dao.implJpa.AircraftDaoJpa" />
+    <bean id="airlineDao" class="ua.cn.stu.tpps.buyfly.dao.implJpa.AirlineDaoJpa" />
+    <bean id="airportDao" class="ua.cn.stu.tpps.buyfly.dao.implJpa.AirportDaoJpa" />
+    <bean id="boardingPassDao" class="ua.cn.stu.tpps.buyfly.dao.implJpa.BoardingPassDaoJpa" />
+    <bean id="cityDao" class="ua.cn.stu.tpps.buyfly.dao.implJpa.CityDaoJpa" />
+    <bean id="flightDao" class="ua.cn.stu.tpps.buyfly.dao.implJpa.FlightDaoJpa" />
+    <bean id="seatDao" class="ua.cn.stu.tpps.buyfly.dao.implJpa.SeatDaoJpa" />
+    <bean id="userDao" class="ua.cn.stu.tpps.buyfly.dao.implJpa.UserDaoJpa" />
+
+
+    <!-- Service beans -->
+    <bean id="aircraftService" class="ua.cn.stu.tpps.buyfly.services.implemented.AircraftServiceImpl" />
+    <bean id="airlineService" class="ua.cn.stu.tpps.buyfly.services.implemented.AirlineServiceImpl" />
+    <bean id="airportService" class="ua.cn.stu.tpps.buyfly.services.implemented.AirportServiceImpl" />
+    <bean id="boardingPassService" class="ua.cn.stu.tpps.buyfly.services.implemented.BoardingPassServiceImpl" />
+    <bean id="cityService" class="ua.cn.stu.tpps.buyfly.services.implemented.CityServiceImpl" />
+    <bean id="flightService" class="ua.cn.stu.tpps.buyfly.services.implemented.FlightServiceImpl" />
+    <bean id="seatService" class="ua.cn.stu.tpps.buyfly.services.implemented.SeatServiceImpl" />
+    <bean id="userService" class="ua.cn.stu.tpps.buyfly.services.implemented.UserServiceImpl" />
+
+</beans>
